@@ -27,8 +27,7 @@ pipeline {
         stage('Tests unitaires') {
             steps {
                 dir('backend') {
-                    sh 'mvn test'
-                }
+                    sh 'mvn test -Dspring.profiles.active=test'                }
             }
         }
 
